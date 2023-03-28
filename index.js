@@ -2,7 +2,18 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hello -world")
+  let data = [
+    {
+      name: "Hasan",
+      age: 34,
+    },
+    {
+      name: "Dulhan",
+      age: 28,
+    },
+  ];
+
+  res.send(data)
 });
 
 app.listen(2000, () => {
